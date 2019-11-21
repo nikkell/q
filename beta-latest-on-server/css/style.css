@@ -1598,39 +1598,6 @@ body {
   display: none;
 }
 
-.overlay_Monolit {
-  background: rgba(0,0,0,0);
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-  transition: background 300ms;
-}
-
-.overlay_Monolit-1 {
-  height: 64px;
-  left: 110px;
-  top: -10px;
-  width: 64px;
-}
-
-.overlay_Monolit-2 {
-  height: 38px;
-  left: 240px;
-  top: 0px;
-  width: 38px;
-}
-
-.overlay_Monolit:hover {
-  background: rgba(0,0,0,0.08);
-}
-
-.searchadffff.active .overlay_Monolit-1 {
-  visibility: hidden;
-}
-.searchadffff:not(.active) .overlay_Monolit-2,
-.searchadffff:not(.searchadffffing) .overlay_Monolit-2 {
-  visibility: hidden;
-}
 .header-chert{
   position: absolute;
   width: 200px;
