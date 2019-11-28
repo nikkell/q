@@ -113,7 +113,6 @@
 	<meta name="interkassa-verification" content="df702bd4b5ab3496e9e072eca1817f02" />
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/reveal.css">
-	<script src="js/search.js"></script>
 	<?php /* Yandex.Metrika counter */ ?>
 	<script type="text/javascript" >
 		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -1497,7 +1496,7 @@ function lol() {
 			swipe_is_active = true;
 	});
 
-	$('header.main-container').swipe( {
+	$('div.table-carousel').swipe( {
 		swipeStatus:function(event, phase, direction, distance, duration, fingerCount, fingerData, currentDirection) {
 			if(phase == 'end' && swipe_is_active) {
 				if(direction == 'left') {
