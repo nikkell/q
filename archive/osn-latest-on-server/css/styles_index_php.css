@@ -1,0 +1,143 @@
+.upload_avatar{
+    font-size: 25px;
+    position: absolute;
+    left: 50%;
+    z-index: 9;
+    display:none;
+    margin-left: -15px;
+    transition: .3s;
+}
+
+.lla:hover .upload_avatar{
+    display:block;
+    transition: .3s;
+}
+
+.lla:hover{
+    background-image: url('https://i.imgur.com/6qUrAqc.png')!important;
+}
+
+.lla{
+    display: inline-block;
+    width: 4em;
+    transition: .3s;
+    height: 4em;
+    
+    border: 1px solid black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+#pct{
+    display: none;
+}
+
+#block {
+    transition: 2s;
+}
+
+/* form starting stylings ------------------------------- */
+.group { 
+    position: relative; 
+    margin-bottom: 45px; 
+}
+
+.group 	input, .group textarea {
+    font-size: 13px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+        width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+.group 	input:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+.group 	label {
+    color: #999; 
+    font-size: 13px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
+}
+
+.group2 label{
+    color: #000; 
+    font-size: 14px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: -20px;
+    transition: 0.2s ease all; 
+    -moz-transition: 0.2s ease all; 
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+.group 	input:focus ~ label, .group input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{
+    position: relative; 
+    display: block; 
+    width: 300px;
+}
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%; 
+    width: 100px; 
+    top: 25%; 
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { 
+        background: #000; 
+    }
+
+    to 	{
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #000;
+    }
+
+    to 	{
+        width: 0; 
+        background: transparent; 
+    }
+}
+
+@keyframes inputHighlighter {
+    from { 
+        background: #000; 
+    }
+
+    to 	{
+        width: 0; 
+        background: transparent; 
+    }
+}

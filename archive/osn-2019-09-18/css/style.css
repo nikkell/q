@@ -1,0 +1,344 @@
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap');
+
+* {
+	font-family: 'Open Sans Condensed', sans-serif;
+	box-sizing: border-box;
+}
+:root {
+	--white: #F4FFF5;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.vh{
+  position:relative;
+  width:20%;
+  height:20%;
+  background-color:grey;
+  left:10%;
+  top:10%;
+  opacity:0.0;
+  
+  }
+  .main-container p{
+    
+	font-family: 'Roboto Mono', monospace!important;
+  }
+
+.accordion-container {
+	height: 40vh;
+}
+
+label[for='about'] {
+	padding: 0 1em;
+	color: var(--white);
+}
+
+.accordion-about {
+	color: var(--white);
+}
+
+.accordion-main {
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 30vh;
+	background-image: url(../images/main_logo.jpg) ;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 60%;
+	box-shadow: 0 0 1px gray;
+}
+
+.social-icons {
+	min-height: 100%;
+	display: flex;
+	justify-content: space-around;
+	width: 5em;
+	flex-flow: row wrap;
+	transition: .5s;
+	margin-right: 1em;
+}
+
+.social-icons > a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+input[type='radio'] {
+	display: none;
+}
+
+label {
+	position: relative;
+	display: block;
+}
+
+label > *, label {
+	transition: .5s
+}
+
+input[type='radio'] ~ label > * {
+	height: 5vh
+}
+
+input[type='radio']:checked ~ label > *:not(h3) {
+	height: 35vh
+}
+
+input[type='radio']:checked ~ label > .accordion-main > .social-icons {
+	width: 3.5em;
+	flex-flow: column wrap;
+	margin-right: 0;
+}
+
+input[type='radio']:not(:checked) ~ label > .accordion-main {
+	opacity: .5
+}
+
+label[for='about'] > h3 {
+	margin: .25em 0;
+	color: var(--white);
+}
+
+label[for='about'] > p {
+	margin-bottom: 0;
+}
+
+input[type='radio']:checked ~ label > h3 {
+	margin-top: 1em;
+}
+
+/*Accordion completed*/
+
+
+/* .main-container {
+	height: 60vh;
+	color: var(--white);
+	background: black;
+	background-image: url(../images/carousel_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 0 10vh;
+	overflow-y: auto;
+}
+
+.table-header {
+	padding-top: 1em;
+	text-shadow: 0 1px 0 gray, 0 2px gray, 0 3px gray;
+}
+
+.table-carousel {
+	margin: 0;
+	min-height: 3em;
+	position: relative;
+	max-height: 30vh;
+}
+
+.carousel-group {
+	display: none;
+	position: relative;
+	width: 100%;
+	padding: 0;
+	transition: .5s;
+}
+
+.enabled {
+	display: block;
+}
+
+.table-note, .table-header {
+	width: 100%;
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.table-note > div, .table-header > * {
+	text-align: center;
+}
+
+.table-note > div:not(:first-child) {
+	margin-top: .5em;
+}
+
+li {
+	list-style: none;
+}
+
+/* Next & previous buttons */
+#prevCarousel, #nextCarousel {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 9;
+  text-shadow: 
+  	0 0 1px white;
+}
+
+/* Position the "next button" to the right */
+#nextCarousel {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+#prevCarousel:hover, #nextCarousel:hover {
+  background-color: #f1f1f1;
+  color: gray;
+  text-shadow: 
+  	0 0 1px white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .2} 
+  to {opacity: 1}
+}
+
+/*table completed */
+
+/*there is login dialog:*/
+
+.modal-dialog {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+	transition: .5s ease-out;
+}
+
+.auth-dialog > *, .profile-dialog > * {
+	background-color: white;
+	border-radius: .25em;
+	padding: 1em 2em 2em;
+	box-shadow: 0 0 5px black;
+	z-index: 12;
+}
+
+.overlay {
+	background: #000000AF;
+	z-index: 11;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+}
+
+.disabled {
+	display: none;
+}
+
+.auth-menu {
+	margin-right: 1em;
+}
+
+.auth-form, .reg-form {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.submit-btn {
+	border: 0;
+	background: black;
+	color: white;
+	padding: .25em 2em;
+	border-radius: .25em;
+	margin-top: 1em;
+}
+
+input:focus, button:focus {
+	outline: 5px auto violet;
+}
+
+label[for="regPassword"], label[for="authPassword"] {
+	margin-top: 1em;
+}
+
+label {
+	margin-bottom: .4em;
+}
+
+/*profile*/
+
+.profile-menu {
+	display: grid;
+	grid-template-columns: auto 1fr 1fr auto auto;
+	grid-template-rows: auto 1fr;
+	grid-column-gap: 2em;
+	grid-row-gap: 1em;
+}
+
+.profile-menu > header {
+	grid-row: 1;
+	grid-column: 5;
+	font-size: 150%;
+	cursor: pointer;
+}
+
+.profile-image-wrapper {
+	grid-row: 1;
+	grid-column: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile-avatar {
+	border-radius: 100%;
+	box-shadow: 0 0 1px black;
+}
+
+.profile-about {
+	grid-row: 1;
+	grid-column: 2 / 4;
+}
+
+.profile-about > * {
+	margin: 0;
+}
+
+.profile-login {
+	margin-bottom: .25em;
+}
+
+.profile-social {
+	grid-row: 2;
+	grid-column: 1 / 4;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-flow: column nowrap;
+} */
+------------------------------ */
