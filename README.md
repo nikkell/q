@@ -1,5 +1,4 @@
-# q
-qvinciy
+# qvinciy
 
 ## RoadMap
 1. [Stabilization: fixing bugs in the current version of the project](https://github.com/nikkell/q/projects/2)
