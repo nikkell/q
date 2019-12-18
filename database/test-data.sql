@@ -1,0 +1,2 @@
+INSERT INTO `users` (`id`, `login`, `password`, `email`, `vk`, `insta`, `info`, `avatarka`, `filename`, `name`, `price`, `reiting`) VALUES
+(74, 'Username', 'Password', NULL, 'https://', 'https://', NULL, NULL, 'https://cdn.icon-icons.com/icons2/1369/PNG/512/-tag-faces_89875.png', 'Пользователь', 13, 0);
